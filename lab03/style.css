@@ -1,0 +1,52 @@
+body {
+    background-color: #fdf9f9; /* Softer background color */
+    color: #140fa8; /* Darker text color for better readability */
+}
+
+h1 {
+    color: #3013ed; /* Warm brown color for the header */
+    font-size: 2em;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+p {
+    background-color: #e5cef3; /* Light lavender background for paragraphs */
+    color: #0b0101ed; /* Dark gray text for better contrast */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.blue-background {
+    background-color: #4c8bce; /* Bright blue background */
+    color: white; /* White text for contrast */
+    text-indent: 2em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: square;
+    padding: 20px;
+    background-color: #eff3b179; /* Soft yellow background */
+    border: 2px dashed #920392; /* Dark purple border */
+}
+
+li {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #327cc6; /* Dark blue for list items */
+}
+
+/* ID selector for a specific element */
+#Journey {
+    font-style: italic; /* Italic text style */
+    color: #fb0a0a; /* Deep red for emphasis */
+}
+
+/* Class selector for highlighting text */
+.highlight {
+    background-color: #ecf298; /* Gold highlight background */
+    font-weight: bold; /* Bold text */
+}
+
+
