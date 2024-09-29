@@ -1,0 +1,39 @@
+/* styles.css */
+
+/* Set a background image for all pages */
+body {
+    background-image: url('images/background.jpg'); /* Change this to your background image path */
+    background-size: cover; /* Make the background cover the entire page */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    color: #100a0a; /* Set text color */
+    font-family: Arial, sans-serif; /* Use a clean sans-serif font */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add some padding */
+}
+
+/* Style the header */
+header {
+    text-align: center; /* Center the header text */
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+/* Style the main content area */
+main {
+    background-color: rgba(187, 225, 244, 0.8); /* Add a white background with some transparency */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0 0 10px rgba(32, 2, 2, 0.2); /* Add a shadow effect */
+}
+
+/* Style the article headings */
+h1, h2, h3 {
+    color: #010a13; /* Darker color for headings */
+}
+
+/* Style the footer */
+footer {
+    text-align: left; /* left the footer text */
+    margin-top: 20px; /* Add space above the footer */
+    font-size: 0.9em; /* Smaller font size for footer */
+    color: #020211; /* Lighter color for footer text */
+}
