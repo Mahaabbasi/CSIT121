@@ -1,0 +1,117 @@
+body {
+    background-color: #e4eaef; /* Softer background color */
+    color: #17137d; /* Darker text color for better readability */
+    font-family: 'Arial', 'Verdana', sans-serif;
+    line-height: 1.6; /* Improved readability */
+    margin: 0; /* Remove default margin */
+}
+
+h1 {
+    color: #283877; /* Warm blue color for the header */
+    font-size: 2.5em; /* Larger header */
+    text-align: center; /* Center the header */
+    margin: 20px 0; /* Margin around the header */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+nav {
+    background-color: #eeedf8; /* Light background for the nav */
+    padding: 1em;
+    border-radius: 8px; /* Rounded corners for the nav */
+    margin: 20px; /* Margin around the nav */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #0b0949; /* Darker text for links */
+    padding: 10px 20px; /* Increased padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth background transition */
+}
+
+nav ul li a:hover {
+    background-color: #a8c7d4; /* Light gray background on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+article {
+    padding: 20px;
+    background-color: #e3ecf4; /* White background for articles */
+    margin-bottom: 20px; /* Spacing between articles */
+    box-shadow: 0 2px 10px rgba(6, 6, 6, 0.1); /* Soft shadow */
+    border-radius: 8px; /* Rounded corners for articles */
+}
+
+h2 {
+    color: #0d3f75; /* Bright blue for article headings */
+    border-bottom: 2px solid #0f549d; /* Underline for section titles */
+    padding-bottom: 10px; /* Space below heading */
+}
+
+p {
+    background-color: #dceaf4; /* Light lavender background for paragraphs */
+    color: #0b0a0f; /* Dark gray text for better contrast */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for paragraphs */
+    margin-bottom: 15px; /* Spacing between paragraphs */
+}
+
+.highlight {
+    background-color: #dfe5f4; /* Gold highlight background */
+    font-weight: bold; /* Bold text */
+}
+
+ul {
+    list-style-type: square; /* Square bullets */
+    padding: 20px;
+    background-color: #e3dcef79; /* Soft yellow background */
+    border-radius: 5px; /* Rounded corners for lists */
+}
+
+li {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #193d61; /* Dark blue for list items */
+}
+
+.reflection {
+    background-color: #e3f2fd; /* Light blue background for reflection */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 20px; /* Spacing above reflection section */
+}
+
+footer {
+    text-align: left;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ebe8fa; /* Same as nav background */
+    color: #2722cb; /* Dark text for footer */
+}
+
+/* Media query for desktop layout */
+@media (min-width: 769px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
