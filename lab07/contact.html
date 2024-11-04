@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tierlist.html">Tier List</a></li>
+                <li><a href="contact.html">Contact Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Feedback Form</h2>
+        <form action="#" method="post" aria-labelledby="form-title">
+            <h3 id="form-title">We value your feedback!</h3>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5" required></textarea>
+
+            <label>Favorite Character:</label>
+            <input type="radio" id="character1" name="character" value="walter_white">
+            <label for="character1">Walter White</label>
+            <input type="radio" id="character2" name="character" value="tony_stark">
+            <label for="character2">Tony Stark</label>
+
+            <label for="tier">Choose a Tier:</label>
+            <select id="tier" name="tier">
+                <option value="S">S</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+
+            <label>Subscribe to Newsletter:</label>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Yes</label>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My TV Characters</p>
+    </footer>
+</body>
+</html>

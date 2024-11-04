@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e2dada; /* Light gray background */
+}
+
+header {
+    background-color: #3498db; /* Blue header */
+    color: rgb(31, 29, 29);
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Change to inline-block for padding */
+    margin: 0 15px;
+    padding: 10px 15px; /* Add padding for better click area */
+    border-radius: 5px; /* Rounded corners for list items */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+nav ul li:nth-child(1) {
+    background-color: #2f9ad0; /* Red for About */
+}
+
+nav ul li:nth-child(2) {
+    background-color: #50a4e0; /* Yellow for Tier List */
+}
+
+nav ul li:nth-child(3) {
+    background-color: #59afde; /* Green for Contact Form */
+}
+
+nav ul li a {
+    color: #f3f1f1; /* White links */
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: #5094d8; /* Darker color on hover */
+}
+
+main {
+    padding: 20px;
+    background-color: #91d1ef; /* White background for main content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #222121;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #23628c; /* Darker blue for table header */
+    color: rgb(238, 231, 231);
+}
+
+/* Row Colors for Character Rankings */
+tbody tr {
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ecf0f1; /* Light gray for odd rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #98c5ef; /* Light yellow for even rows */
+}
+
+tbody tr[data-rank="S"] {
+    background-color: #9aee8b; /* Bright orange for S rank */
+    color: rgb(17, 15, 15); /* White text for contrast */
+}
+
+tbody tr[data-rank="A"] {
+    background-color: #f5da88; /* Green for A rank */
+    color: rgb(15, 14, 14); /* White text for contrast */
+}
+
+tbody tr[data-rank="B"] {
+    background-color: #e7a768; /* Blue for B rank */
+    color: rgb(26, 23, 23); /* White text for contrast */
+}
+
+tbody tr[data-rank="C"] {
+    background-color: #f2ae93; /* Dark orange for C rank */
+    color: rgb(26, 24, 24); /* White text for contrast */
+}
+
+tbody tr[data-rank="D"] {
+    background-color: #d5ec8e; /* Red for D rank */
+    color: rgb(12, 11, 11); /* White text for contrast */
+}
+
+tbody tr:hover {
+    background-color: #43997e; /* Light blue on hover */
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: #f0f3f4; /* Light gray footer */
+}
+
+footer {
+    text-align: left;
+    padding: 10px 0;
+    background-color: #2c3e50; /* Dark footer */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Image styling */
+img {
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
