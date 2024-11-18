@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details - Toggle View</title>
+
+    <!-- CSS -->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            display: none; /* Initially hide the table */
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        /* CSS to center the button */
+        .center {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        // Global variable to track whether the table is visible or not
+        let isTableVisible = false;
+
+        function loadXMLDoc() {
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    empDetails(this);
+                }
+            };
+            xmlhttp.open("GET", "employee.xml", true);
+            xmlhttp.send();
+        }
+
+        function empDetails(xml) {
+            let i;
+            let xmlDoc = xml.responseXML;
+            let table =
+                `<tr><th>Firstname</th><th>Lastname</th><th>Title</th><th>Division</th><th>Building</th><th>Room</th></tr>`;
+            let employees = xmlDoc.getElementsByTagName("employee");
+
+            for (i = 0; i < employees.length; i++) {
+                table += `<tr><td>${employees[i].getElementsByTagName("firstname")[0].childNodes[0].nodeValue}</td>
+                            <td>${employees[i].getElementsByTagName("lastname")[0].childNodes[0].nodeValue}</td>
+                            <td>${employees[i].getElementsByTagName("title")[0].childNodes[0].nodeValue}</td>
+                            <td>${employees[i].getElementsByTagName("division")[0].childNodes[0].nodeValue}</td>
+                            <td>${employees[i].getElementsByTagName("building")[0].childNodes[0].nodeValue}</td>
+                            <td>${employees[i].getElementsByTagName("room")[0].childNodes[0].nodeValue}</td></tr>`;
+            }
+
+            // Place the constructed table in the HTML
+            document.getElementById("id").innerHTML = table;
+        }
+
+        // Toggle table visibility and update button text
+        function toggleTable() {
+            const table = document.getElementById("id");
+            const button = document.getElementById("toggleButton");
+
+            if (isTableVisible) {
+                table.style.display = "none"; // Hide table
+                button.textContent = "Get Employee Data"; // Change button text
+            } else {
+                table.style.display = "block"; // Show table
+                loadXMLDoc(); // Fetch and display the data
+                button.textContent = "Close Employee Data"; // Change button text
+            }
+
+            // Toggle visibility state
+            isTableVisible = !isTableVisible;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="center">
+        <!-- Button that toggles the table visibility and text -->
+        <button id="toggleButton" class="button" onclick="toggleTable()">
+            Get Employee Data
+        </button>
+    </div>
+
+    <br><br>
+    <!-- Table initially hidden -->
+    <table id="id"></table>
+</body>
+
+</html>

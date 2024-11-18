@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+
+    <!-- CSS -->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        /* CSS to center the button */
+        .center {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        function loadXMLDoc() {
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    empDetails(this);
+                }
+            };
+            xmlhttp.open("GET", "employee.xml", true);
+            xmlhttp.send();
+        }
+
+        function empDetails(xml) {
+            let i;
+            let xmlDoc = xml.responseXML;
+            let table =
+                `<tr><th>Firstname</th><th>Lastname</th><th>Title</th><th>Division</th><th>Building</th><th>Room</th></tr>`;
+            let employees = xmlDoc.getElementsByTagName("employee");
+
+            for (i = 0; i < employees.length; i++) {
+                table += `<tr><td>${employees[i].getElementsByTagName("firstname")[0].childNodes[0].nodeValue}</td>
+                            <td>${employees[i].getElementsByTagName("lastname")[0].childNodes[0].nodeValue}</td>
+                            <td>${employees[i].getElementsByTagName("title")[0].childNodes[0].nodeValue}</td>
+                            <td>${employees[i].getElementsByTagName("division")[0].childNodes[0].nodeValue}</td>
+                            <td>${employees[i].getElementsByTagName("building")[0].childNodes[0].nodeValue}</td>
+                            <td>${employees[i].getElementsByTagName("room")[0].childNodes[0].nodeValue}</td></tr>`;
+            }
+
+            document.getElementById("id").innerHTML = table;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Use a div with CSS class 'center' to center the button -->
+    <div class="center">
+        <button class="button" onclick="loadXMLDoc()">Get Employees Details</button>
+    </div>
+
+    <br><br>
+    <table id="id"></table>
+</body>
+
+</html>
