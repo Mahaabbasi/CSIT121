@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How are Pointer Events Used?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="pointer-heading">Pointer Events</h1> 
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="importance.html">Why is it Important?</a></li>
+        <li><a href="usage.html">How is it Used?</a></li>
+        <li><a href="sources.html">Sources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>How are Pointer Events Used?</h2> 
+      <p>Pointer Events are used in web development to manage user interactions with pointing devices like a mouse or touch screen. Events such as <code>pointerdown</code>, <code>pointerup</code>, and <code>pointermove</code> are triggered based on user interactions, such as clicking, tapping, or moving a mouse or finger across a touch screen.</p>
+      <p>In JavaScript, you can use Pointer Events just like traditional mouse and touch events, but with the added benefit of handling all input types with one unified model. Here is an example of a simple Pointer Event listener:</p>
+      <pre><code>document.addEventListener('pointerdown', 
+        function(event) {console.log("Pointer down 
+        event triggered!");
+});</code></pre>
+      <p>This simple example listens for the <code>pointerdown</code> event and logs a message when triggered, regardless of whether the input comes from a mouse, touchscreen, or stylus.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mahnoor Abbasi | <a href="sources.html">Sources</a></p>
+  </footer>
+</body>
+</html>

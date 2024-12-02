@@ -1,0 +1,122 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://img.freepik.com/premium-photo/meteorologist-using-pointer-highlight-background_987764-39289.jpg?w=2000'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Pointer Events Heading */
+.pointer-heading {
+  font-size: 3em; /* Make the text large */
+  text-align: center;
+  color: #fff; /* White text */
+  margin-top: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fdf8f8;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff6347; /* Tomato color */
+}
+
+/* Main content */
+main {
+  width: 80%;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 30px;
+  background: rgba(234, 232, 232, 0.705); /* Slightly transparent white */
+  backdrop-filter: blur(10px); /* Add blur effect */
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(23, 22, 22, 0.001);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1, h2 {
+  font-size: 2.5em;
+  color: #080808;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #050404;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f4f4f4;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1em;
+}
+
+footer a {
+  color: #ff6347;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
