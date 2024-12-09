@@ -1,0 +1,165 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and basic layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* Main content section */
+main {
+    margin-top: 20px;
+}
+
+#labs {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+.lab {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lab h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.lab p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.lab ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.lab a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lab a:hover {
+    text-decoration: underline;
+}
+
+/* Accessible images */
+.portfolio-image,
+.about-me-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.about-me-image {
+    background-image: url('webdevelopment.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .lab {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .lab h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
